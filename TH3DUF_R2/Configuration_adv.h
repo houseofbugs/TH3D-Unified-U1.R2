@@ -355,6 +355,13 @@
   #define FILAMENT_CHANGE_ALERT_BEEPS         10 
   #define PAUSE_PARK_NO_STEPPER_TIMEOUT          
   #define PARK_HEAD_ON_PAUSE
+  #if ENABLED(PAUSE_ACTION_OCTOPI)
+    #define ACTION_ON_PAUSE "paused"
+    #define ACTION_ON_RESUME "resumed"
+  #elif ENABLED(PAUSE_ACTION_DEFAULT)
+    #define ACTION_ON_PAUSE "pause"
+    #define ACTION_ON_RESUME "resume"
+  #endif  
 #endif
 
 #define AUTO_REPORT_TEMPERATURES
